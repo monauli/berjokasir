@@ -9,13 +9,11 @@ const LOKASI = [
     id: 'jumog',
     nama: 'Air Terjun Jumog',
     desc: 'Arus tiket untuk area air terjun.',
-    tone: 'Biru air',
   },
   {
     id: 'madirda',
     nama: 'Telaga Madirda',
     desc: 'Arus tiket untuk area telaga.',
-    tone: 'Biru elegan',
   },
 ]
 
@@ -93,7 +91,6 @@ function PilihLokasi() {
                   <LocationMark type={lok.id} size={48} />
                   <div>
                     <div style={{ color: 'var(--text-main)', fontWeight: 800, fontSize: '1.02rem' }}>{lok.nama}</div>
-                    <div style={{ color: 'var(--location-primary)', fontSize: '0.78rem', fontWeight: 800, marginTop: '0.18rem' }}>{lok.tone}</div>
                   </div>
                 </div>
                 <p style={{ color: 'var(--text-muted)', margin: 0, fontSize: '0.9rem', lineHeight: 1.55 }}>{lok.desc}</p>

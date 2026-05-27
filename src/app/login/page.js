@@ -4,8 +4,8 @@ import { useRouter } from 'next/navigation'
 import { useAuth, AuthProvider } from '@/components/AuthContext'
 
 const LOKASI_INFO = {
-  jumog: { nama: 'Air Terjun Jumog', kode: 'JG', tone: 'Biru air' },
-  madirda: { nama: 'Telaga Madirda', kode: 'MD', tone: 'Biru elegan' },
+  jumog: { nama: 'Air Terjun Jumog', kode: 'JG' },
+  madirda: { nama: 'Telaga Madirda', kode: 'MD' },
 }
 
 function LoginForm() {
@@ -91,14 +91,13 @@ function LoginForm() {
 
         <div style={{ textAlign: 'center', marginBottom: '1.45rem' }}>
           <img src="/logo-berjo.png" alt="Wisata Berjo" style={{ height: 66, objectFit: 'contain' }} />
-          <div style={{ marginTop: '0.85rem' }} className="location-chip">
+          <h1 style={{ color: 'var(--text-main)', fontSize: '1.2rem', margin: '1rem 0 0.65rem', fontWeight: 800, letterSpacing: 0 }}>
+            Masuk Sistem Kasir
+          </h1>
+          <div style={{ margin: '0 auto' }} className="location-chip">
             <span className="location-dot" />
             {info.nama}
           </div>
-          <h1 style={{ color: 'var(--text-main)', fontSize: '1.2rem', margin: '1rem 0 0.25rem', fontWeight: 800, letterSpacing: 0 }}>
-            Masuk Sistem Kasir
-          </h1>
-          <p style={{ fontSize: '0.84rem', color: 'var(--text-muted)', margin: 0, fontWeight: 600 }}>{info.tone}</p>
         </div>
 
         <form onSubmit={handleLogin}>
